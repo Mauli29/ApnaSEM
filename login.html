@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APNA SEM | Login</title>
+
+  <style>
+    body.auth-bg{
+      background:linear-gradient(135deg,#020617,#0f172a);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Arial,sans-serif;
+      margin:0;
+    }
+
+    .auth-box{
+      background:#0b1220;
+      color:#fff;
+      padding:30px;
+      width:350px;
+      border-radius:12px;
+      box-shadow:0 20px 40px rgba(0,0,0,.6);
+    }
+
+    .auth-box h1{
+      text-align:center;
+      margin-bottom:5px;
+    }
+
+    .auth-box p{
+      text-align:center;
+      color:#94a3b8;
+      margin-bottom:15px;
+    }
+
+    .auth-box input{
+      width:100%;
+      padding:10px;
+      margin:8px 0;
+      border-radius:6px;
+      border:none;
+      outline:none;
+      font-size:14px;
+    }
+
+    .captcha-box{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin:8px 0;
+    }
+
+    .captcha{
+      background:#1e293b;
+      padding:8px 12px;
+      border-radius:6px;
+      font-weight:bold;
+      letter-spacing:2px;
+      user-select:none;
+    }
+
+    .refresh-btn{
+      background:#2563eb;
+      border:none;
+      color:#fff;
+      padding:6px 10px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:12px;
+    }
+
+    .main-btn{
+      width:100%;
+      padding:12px;
+      background:#16a34a;
+      color:#fff;
+      border:none;
+      border-radius:6px;
+      margin-top:10px;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    .link-text{
+      text-align:center;
+      margin-top:12px;
+      font-size:14px;
+    }
+
+    .link-text a{
+      color:#60a5fa;
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body class="auth-bg">
+
+  <div class="auth-box">
+    <h1>APNA SEM</h1>
+    <p>Login to your account</p>
+
+    <input type="tel" placeholder="Mobile Number" required>
+    <input type="password" placeholder="Password" required>
+
+    <!-- Captcha -->
+    <div class="captcha-box">
+      <div class="captcha" id="captchaText">A7K9</div>
+      <button class="refresh-btn" onclick="generateCaptcha()">Refresh</button>
+    </div>
+
+    <input type="text" placeholder="Enter Captcha" required>
+
+    <button class="main-btn">Login</button>
+
+    <p class="link-text">
+      Don’t have an account?
+      <a href="createaccount.html">Create Account</a>
+
+
+    </p>
+
+    <p class="link-text">
+     <a href="index.html">← Back to Home</a>
+    </p>
+  </div>
+
+  <script>
+    function generateCaptcha(){
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let captcha = "";
+      for(let i=0;i<4;i++){
+        captcha += chars.charAt(Math.floor(Math.random()*chars.length));
+      }
+      document.getElementById("captchaText").innerText = captcha;
+    }
+  </script>
+
+</body>
+</html>

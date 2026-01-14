@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APNA SEM | Create Account</title>
+
+  <style>
+    /* ===== Page Background ===== */
+    body.auth-bg{
+      background:linear-gradient(135deg,#020617,#0f172a);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Arial,sans-serif;
+      margin:0;
+    }
+
+    /* ===== Box ===== */
+    .auth-box{
+      background:#0b1220;
+      color:#fff;
+      padding:30px;
+      width:350px;
+      border-radius:12px;
+      box-shadow:0 20px 40px rgba(0,0,0,.6);
+    }
+
+    .auth-box h1{
+      text-align:center;
+      margin-bottom:5px;
+    }
+
+    .auth-box p{
+      text-align:center;
+      color:#94a3b8;
+      margin-bottom:15px;
+    }
+
+    /* ===== Inputs ===== */
+    .auth-box input{
+      width:100%;
+      padding:10px;
+      margin:8px 0;
+      border-radius:6px;
+      border:none;
+      outline:none;
+      font-size:14px;
+    }
+
+    /* ===== Buttons ===== */
+    .otp-btn{
+      width:100%;
+      padding:10px;
+      background:#2563eb;
+      color:#fff;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      margin-bottom:8px;
+    }
+
+    .main-btn{
+      width:100%;
+      padding:12px;
+      background:#16a34a;
+      color:#fff;
+      border:none;
+      border-radius:6px;
+      margin-top:10px;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    /* ===== Links ===== */
+    .link-text{
+      text-align:center;
+      margin-top:12px;
+      font-size:14px;
+    }
+
+    .link-text a{
+      color:#60a5fa;
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body class="auth-bg">
+
+  <div class="auth-box">
+    <h1>APNA SEM</h1>
+    <p>Sign up to stay updated</p>
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email ID" required>
+    <input type="tel" placeholder="Mobile Number" required>
+
+    <button class="otp-btn">Send OTP</button>
+    <input type="text" placeholder="Enter OTP" required>
+
+    <input type="password" placeholder="Create Password" required>
+    <input type="password" placeholder="Confirm Password" required>
+
+    <button class="main-btn">Create Account</button>
+
+    <p class="link-text">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+
+    <p class="link-text">
+      <a href="index.html">← Back to Home</a>
+    </p>
+  </div>
+
+</body>
+</html>
